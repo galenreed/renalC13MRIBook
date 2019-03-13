@@ -1,0 +1,3 @@
+clear all; close all;addpath ~/matlab/read_MR;addpath ~/matlab/ge_raw_read;load('data/rat_pyruvate_slice_dynamic.mat')nt = 40;nf = 4096;% frequency axisbw = 10000;cf = 3810;f = bw*(1:nf)/nf - cf;spectra = zeros([nf nt]);for ii = 1:nt  thisfid = squeeze(data(:, ii));  thisspectra = abs(fftshift(fft(fftshift(thisfid))));  spectra(:, ii) = thisspectra;
+endfor
+[u, s, v] = svd(spectra);semilogy(diag(s))figure();plot(f, sum(spectra,2))xlim([-1000, 1000])
