@@ -1,0 +1,3 @@
+[submodule "utils/hyperpolarized-mri-toolbox"]
+	path = utils/hyperpolarized-mri-toolbox
+	url = https://github.com/LarsonLab/hyperpolarized-mri-toolbox.git
