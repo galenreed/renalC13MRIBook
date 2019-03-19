@@ -7,6 +7,9 @@ solutionType = 0;
 
 % regularization for least squares
 regularizationLambda = 5e3;
+regularizationLambda = 5e0;
+
+
 
 load('data/ureaSSFPImages.mat');
 im = double(im_int2);
@@ -117,6 +120,7 @@ xlabel('time [s]', 'fontsize', fs);
 ylabel('signal', 'fontsize', fs);
 
 set(gca, 'fontsize', fs)
+
 
 
 % next 2 lines just to make the legend with the right fontsize
